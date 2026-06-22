@@ -14,7 +14,32 @@ body {
 .section {
   margin-top: 60px;
 }
+.hero {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 40px;
+}
 
+.hero-image img {
+  width: 300px;
+  border-radius: 12px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-image img {
+    width: 200px;
+  }
+}
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -44,21 +69,30 @@ body {
 </head>
 
 <body style="max-width:900px;margin:60px auto;font-family:Arial, sans-serif;line-height:1.7;padding:20px;">
-<img
-  src="Anjila site image.jpeg"
-  alt="Jerin Anjum Anjila"
-  style="width:300px;border-radius:12px;margin-bottom:20px;">
-  
-  <h1>Jerin Anjum Anjila</h1>
+<div class="hero">
 
-  <p>
-    <strong>Anthropologist • Writer • Photographer • Communications Professional</strong>
-  </p>
+  <div class="hero-image">
+    <img
+      src="Anjila site image.jpeg"
+      alt="Jerin Anjum Anjila">
+  </div>
 
-  <p>
-    Exploring mental health, gender, culture, and digital life through research,
-    storytelling, and visual media.
-  </p>
+  <div class="hero-text">
+
+    <h1>Jerin Anjum Anjila</h1>
+
+    <p>
+      <strong>Anthropologist • Writer • Photographer • Communications Professional</strong>
+    </p>
+
+    <p>
+      Exploring mental health, gender, culture, and digital life through research,
+      storytelling, and visual media.
+    </p>
+
+  </div>
+
+</div>
 
   <hr>
 
