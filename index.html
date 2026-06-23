@@ -50,6 +50,39 @@ body {
   }
 
 }
+.about-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.about-main {
+  flex: 2;
+}
+
+.about-sidebar {
+  flex: 1;
+  background: #fbf8f2;
+  border: 1px solid #e5ddd2;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.about-sidebar h3 {
+  margin-top: 0;
+}
+
+.about-sidebar p {
+  margin-bottom: 18px;
+}
+
+@media (max-width: 768px) {
+
+  .about-layout {
+    flex-direction: column;
+  }
+
+}
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -125,6 +158,10 @@ body {
 
   <h2>About Me</h2>
 
+<div class="about-layout">
+
+<div class="about-main">
+  
   <p>
 I am an anthropologist, writer, photographer, and communications professional currently pursuing an MA in Medical Anthropology and Mental Health at SOAS University of London. Before moving to London, I completed my BSS in Anthropology at the University of Dhaka. My academic interests have grown alongside a lifelong involvement in writing, volunteering, visual storytelling, and public engagement.
 </p>
@@ -144,6 +181,53 @@ Many of these interests have also shaped my research. During my undergraduate st
   <p>
 When I am not working or studying, I am usually taking photographs, editing videos, writing, reading, or finding new ways to tell stories. Much of what I do, whether through research, writing, photography, or communication, begins with a curiosity about people, their lives, and the worlds they create around themselves.
 </p>
+
+</div>
+
+<div class="about-sidebar">
+
+<h3>Overview</h3>
+
+<p>
+<strong>Based In</strong><br>
+London, UK • Dhaka, Bangladesh
+</p>
+
+<p>
+<strong>Education</strong><br>
+MA Medical Anthropology & Mental Health<br>
+SOAS University of London
+</p>
+
+<p>
+<strong>Languages</strong><br>
+Bangla • English
+</p>
+
+<p>
+<strong>Focus</strong><br>
+Mental Health • Gender • Digital Culture
+</p>
+
+<p>
+<strong>Works In</strong><br>
+Research • Writing • Photography
+</p>
+
+<p>
+<strong>Available For</strong><br>
+Research Collaborations • Writing Projects
+</p>
+
+<p>
+<strong>Inspired By</strong><br>
+Judith Butler • Emma A. Jane • Simone de Beauvoir • Maurice Merleau-Ponty • Sylvia Plath
+</p>
+
+</div>
+
+</div>
+  
 </body>
   
 <div class="section">
