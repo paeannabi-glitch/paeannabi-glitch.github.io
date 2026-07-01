@@ -206,6 +206,28 @@
     cursor: pointer;
   }
 
+  /* Photography Grid Style */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .photo-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    aspect-ratio: 3 / 2; /* ছবিগুলোকে সমান সাইজের বক্সে রাখবে */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+
+  @media (max-width: 768px) {
+    .photo-grid {
+      grid-template-columns: 1fr; /* মোবাইলে এক লাইনে একটা করে ছবি দেখাবে */
+    }
+  }
   /* --- Mobile Nav Adjustments --- */
   @media (max-width: 768px) {
     .hamburger {
@@ -407,6 +429,14 @@
       <h4>মাফুশির প্রবাসী পুরুষেরা</h4>
       <p>মাফুশি ঘুরতে গিয়ে মনে হলো সেন্ট মার্টিন চলে এলাম নাতো! হোটেল, রেস্টুরেন্ট সবখানেই বাংলাদেশি কর্মীরা কাজ করছে। অধিকাংশই বাংলাদেশি মুসলিম। দেশটাও মুসলিম সংখ্যাগরিষ্ঠ। কিন্তু ট্যুরিস্ট নারীরা নিশ্চিন্তে ঘুরছে। দেশে কি এই সুযোগ ছিল? 
       <br><a href="https://www.facebook.com/jerinanjum.anjila713/posts/pfbid02E6oZtCJqka9Q9oAtVpeJBQ2WioB4cRrhBS6D8Tg5ZzpmXiAhrqbLJKAMNvz9rmhhl" target="_blank">পড়ুন (Facebook)</a></p>
+    </div>
+  </div>  
+<div class="section" id="photography">
+    <h2>Photography</h2>
+    <div class="photo-grid">
+      <img src="photo1.jpg" alt="Photography 1">
+      <img src="photo2.jpg" alt="Photography 2">
+      <img src="photo3.jpg" alt="Photography 3">
     </div>
   </div>  
 <script>
