@@ -3,6 +3,9 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+  html {
+    scroll-behavior: smooth;
+  }  
   body {
     margin: 10px auto;
     padding: 20px;
@@ -312,8 +315,8 @@
     <button class="hamburger" onclick="toggleMenu()">☰</button>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
       <li><a href="#research">Research</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#writing">Writing</a></li>
       <li><a href="#photography">Photography</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -345,7 +348,7 @@
 
   <hr>
 
-  <h2>About Me</h2>
+  <h2 id="about">About Me</h2>
 
   <div class="about-layout">
     <div class="about-main">
