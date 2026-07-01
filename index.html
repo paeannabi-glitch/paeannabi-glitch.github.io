@@ -228,6 +228,60 @@
       grid-template-columns: 1fr; /* মোবাইলে এক লাইনে একটা করে ছবি দেখাবে */
     }
   }
+  /* Contact and Footer Style */
+  .contact-section {
+    background-color: #2b2b2b;
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .contact-section h2 {
+    color: white;
+    margin-top: 0;
+  }
+
+  .contact-text {
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #ddd;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .social-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .social-buttons a {
+    text-decoration: none;
+    color: #2b2b2b;
+    background: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s;
+  }
+
+  .social-buttons a:hover {
+    background: #e5ddd2;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #777;
+  }
   /* --- Mobile Nav Adjustments --- */
   @media (max-width: 768px) {
     .hamburger {
@@ -438,6 +492,21 @@
       <img src="photo2.jpg" alt="Photography 2">
       <img src="photo3.jpg" alt="Photography 3">
     </div>
+  </div>  
+<div class="section contact-section" id="contact">
+    <h2>Contact</h2>
+    <p class="contact-text">I am always open to new conversations and collaborations. If you are working on something interesting intersecting mental health, culture, or digital life, or if you just want to say hello, please get in touch.</p>
+    
+    <div class="social-buttons">
+      <a href="mailto:munia713@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/anjila713/" target="_blank">LinkedIn</a>
+      <a href="https://www.facebook.com/jerinanjum.anjila713" target="_blank">Facebook</a>
+      <a href="https://instagram.com/anjila713" target="_blank">Instagram</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 Jerin Anjum Anjila. All rights reserved.
   </div>  
 <script>
     function toggleMenu() {
