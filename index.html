@@ -2,326 +2,287 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-body {
-  margin: 10px auto;
-  padding: 10px;
-  font-family: Arial, sans-serif;
-  line-height: 1.7;
-  color: #2b2b2b;
-  background: #f5efe6;
-}
+<style>
+  body {
+    margin: 10px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    color: #2b2b2b;
+    background: #f5efe6;
+    max-width: 1000px; /* Keeps the site from stretching too wide on large PC monitors */
+  }
 
-.section {
-  margin-top: 60px;
-}
-.hero {
+  .section {
+    margin-top: 35px; /* Reduced gap above sections */
+  }
+
+  .hero {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #fbf8f2;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+
+  .hero-image img {
+    width: 250px;
+    border-radius: 12px;
+  }
+
+  .hero-text h1 {
+    margin-top: 0; /* Fixes the large gap above the name */
+    margin-bottom: 10px;
+  }
+
+  .about-layout {
     display: flex;
     gap: 40px;
     align-items: flex-start;
-    margin-bottom: 20px;
+  }
 
+  .about-main {
+    flex: 2;
+  }
+
+  .about-sidebar {
+    flex: 1;
     background: #fbf8f2;
-    padding: 40px;
-    border-radius: 0;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-}
-
-.hero-image img {
-    width: 250px;
-    border-radius: 12px;
-}
-
-@media (max-width: 768px) {
-
-  .hero {
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    text-align: center;
-  }
-
-  .hero-image img {
-    width: 180px;
-  }
-
-  .hero-text {
-    width: 100%;
-  }
-
-}
-.about-layout {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-.about-main {
-  flex: 2;
-  padding-left: 10px;
-}
-
-.about-sidebar {
-  flex: 1;
-  background: #fbf8f2;
-  border: 1px solid #e5ddd2;
-  padding: 25px;
-  border-radius: 12px;
-}
-
-.about-sidebar h3 {
-  margin-top: 0;
-}
-
-.about-sidebar p {
-  margin-bottom: 18px;
-}
-
-@media (max-width: 768px) {
-
-  .about-layout {
-    flex-direction: column;
-  }
-
-}
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.card {
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 18px;
-  min-width: 220px;
-  flex: 1;
-  background: #fafafa;
-}
-
-.card h3 {
-  margin-top: 0;
-  font-size: 18px;
-}
-
-.card p {
-  margin-bottom: 0;
-  font-size: 14px;
-  color: #666;
-}
-@media (max-width: 768px) {
-
-  .hero {
-    flex-direction: column;
+    border: 1px solid #e5ddd2;
     padding: 25px;
+    border-radius: 12px;
   }
 
-  .hero-image img {
-    width: 220px;
-}
+  .about-sidebar h3 {
+    margin-top: 0;
+  }
 
-}  
+  .about-sidebar p {
+    margin-bottom: 18px;
+  }
 
-hr {
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
+  /* Switched to CSS Grid to fix the stretched card issue */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+  }
 
-h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-}    
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 18px;
+    background: #fafafa;
+  }
+
+  .card h3 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+
+  .card p {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #666;
+  }
+
+  hr {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #ccc;
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 10px; /* Reduced gap below headings */
+  }    
+
+  /* Mobile Adjustments */
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px; /* Reduced gap between photo and text */
+      text-align: center;
+      padding: 25px;
+    }
+
+    .hero-image img {
+      width: 180px;
+    }
+
+    .about-layout {
+      flex-direction: column;
+      gap: 20px; /* Fixed gap before the Overview box */
+    }
     
+    .section {
+      margin-top: 25px; /* Even smaller section gaps for mobile */
+    }
+  }
 </style>
 </head>
 
 <body>
-<div class="hero">
+  <div class="hero">
+    <div class="hero-image">
+      <img src="Anjila site image.jpeg" alt="Jerin Anjum Anjila">
+    </div>
 
-  <div class="hero-image">
-    <img
-      src="Anjila site image.jpeg"
-      alt="Jerin Anjum Anjila">
+    <div class="hero-text">
+      <h1>Jerin Anjum Anjila</h1>
+      
+      <p style="margin-top:-10px;color:#555;">
+        MA Medical Anthropology & Mental Health<br>
+        SOAS University of London
+      </p>
+      
+      <p>
+        <strong>Anthropologist • Writer • Photographer • Communications Professional</strong>
+      </p>
+
+      <p>
+        Exploring mental health, gender, culture, and digital life through research,
+        storytelling, and visual media.
+      </p>
+    </div>
   </div>
-
-  <div class="hero-text">
-
-    <h1>Jerin Anjum Anjila</h1>
-    
-<p style="margin-top:-10px;color:#555;">
-  MA Medical Anthropology & Mental Health<br>
-  SOAS University of London
-</p>
-    
-    <p>
-      <strong>Anthropologist • Writer • Photographer • Communications Professional</strong>
-    </p>
-
-    <p>
-      Exploring mental health, gender, culture, and digital life through research,
-      storytelling, and visual media.
-    </p>
-
-  </div>
-
-</div>
 
   <hr>
 
   <h2>About Me</h2>
 
-<div class="about-layout">
+  <div class="about-layout">
+    <div class="about-main">
+      <p>
+        I am an anthropologist, writer, photographer, and communications professional currently pursuing an MA in Medical Anthropology and Mental Health at SOAS University of London. Before moving to London, I completed my BSS in Anthropology at the University of Dhaka. My academic interests have grown alongside a lifelong involvement in writing, volunteering, visual storytelling, and public engagement.
+      </p>
 
-<div class="about-main">
-  
-  <p>
-I am an anthropologist, writer, photographer, and communications professional currently pursuing an MA in Medical Anthropology and Mental Health at SOAS University of London. Before moving to London, I completed my BSS in Anthropology at the University of Dhaka. My academic interests have grown alongside a lifelong involvement in writing, volunteering, visual storytelling, and public engagement.
-</p>
+      <p>
+        I started writing while I was still in school. Over the years, that journey has taken me to platforms such as Prothom Alo, The Daily Star, Earki, and several other publications. Professionally, I have worked with organizations including BRAC, the Centre for Policy Dialogue (CPD), and the South Asian Network on Economic Modeling (SANEM). At CPD, I worked with the team behind the White Paper on the State of the Bangladesh Economy. I have also worked in advertising and communications, contributing to campaigns and content for major brands as well as development organizations.
+      </p>
 
-<p>
-I started writing while I was still in school. Over the years, that journey has taken me to platforms such as Prothom Alo, The Daily Star, Earki, and several other publications. Professionally, I have worked with organizations including BRAC, the Centre for Policy Dialogue (CPD), and the South Asian Network on Economic Modeling (SANEM). At CPD, I worked with the team behind the White Paper on the State of the Bangladesh Economy. I have also worked in advertising and communications, contributing to campaigns and content for major brands as well as development organizations.
-</p>
+      <p>
+        Outside work and academia, I have always been drawn to community work and public causes. From volunteering in school clubs to participating in movements and protests that shaped public conversations in Bangladesh and beyond, civic engagement has remained a constant part of my life. These experiences continue to inform both my academic interests and my understanding of the world around me.
+      </p>
 
-<p>
-Outside work and academia, I have always been drawn to community work and public causes. From volunteering in school clubs to participating in movements and protests that shaped public conversations in Bangladesh and beyond, civic engagement has remained a constant part of my life. These experiences continue to inform both my academic interests and my understanding of the world around me.
-</p>
+      <p>
+        Many of these interests have also shaped my research. During my undergraduate studies, I worked on guestroom culture as my thesis topic at a time when discussions around student politics remained particularly sensitive. At BRAC, I worked on communication initiatives related to climate change, while my current interests focus on mental health, gender, digital culture, and the ways people experience power, belonging, and social change in everyday life.
+      </p>
 
-<p>
-Many of these interests have also shaped my research. During my undergraduate studies, I worked on guestroom culture as my thesis topic at a time when discussions around student politics remained particularly sensitive. At BRAC, I worked on communication initiatives related to climate change, while my current interests focus on mental health, gender, digital culture, and the ways people experience power, belonging, and social change in everyday life.
-</p>
+      <p>
+        When I am not working or studying, I am usually taking photographs, editing videos, writing, reading, or finding new ways to tell stories. Much of what I do, whether through research, writing, photography, or communication, begins with a curiosity about people, their lives, and the worlds they create around themselves.
+      </p>
+    </div>
 
-  <p>
-When I am not working or studying, I am usually taking photographs, editing videos, writing, reading, or finding new ways to tell stories. Much of what I do, whether through research, writing, photography, or communication, begins with a curiosity about people, their lives, and the worlds they create around themselves.
-</p>
+    <div class="about-sidebar">
+      <h3>Overview</h3>
 
-</div>
+      <p>
+        <strong>Based In</strong><br>
+        London, UK • Dhaka, Bangladesh
+      </p>
 
-<div class="about-sidebar">
+      <p>
+        <strong>Education</strong><br>
+        MA Medical Anthropology & Mental Health<br>
+        SOAS University of London
+      </p>
 
-<h3>Overview</h3>
+      <p>
+        <strong>Languages</strong><br>
+        Bangla • English
+      </p>
 
-<p>
-<strong>Based In</strong><br>
-London, UK • Dhaka, Bangladesh
-</p>
+      <p>
+        <strong>Focus</strong><br>
+        Mental Health • Gender • Digital Culture
+      </p>
 
-<p>
-<strong>Education</strong><br>
-MA Medical Anthropology & Mental Health<br>
-SOAS University of London
-</p>
+      <p>
+        <strong>Works In</strong><br>
+        Research • Writing • Photography
+      </p>
 
-<p>
-<strong>Languages</strong><br>
-Bangla • English
-</p>
+      <p>
+        <strong>Available For</strong><br>
+        Research Collaborations • Writing Projects
+      </p>
 
-<p>
-<strong>Focus</strong><br>
-Mental Health • Gender • Digital Culture
-</p>
+      <p>
+        <strong>Inspired By</strong><br>
+        Judith Butler • Emma A. Jane • Simone de Beauvoir • Maurice Merleau-Ponty • Sylvia Plath
+      </p>
+    </div>
+  </div>
 
-<p>
-<strong>Works In</strong><br>
-Research • Writing • Photography
-</p>
+  <div class="section">
+    <h2>Research Interests</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Medical Anthropology</h3>
+      </div>
+      <div class="card">
+        <h3>Mental Health</h3>
+      </div>
+      <div class="card">
+        <h3>Gender & Sexuality</h3>
+      </div>
+      <div class="card">
+        <h3>Digital Culture</h3>
+      </div>
+      <div class="card">
+        <h3>Media & Communication</h3>
+      </div>
+      <div class="card">
+        <h3>Social & Political Movements</h3>
+      </div>
+    </div>
+  </div>
 
-<p>
-<strong>Available For</strong><br>
-Research Collaborations • Writing Projects
-</p>
+  <div class="section">
+    <h2>Current Work</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>MA Medical Anthropology & Mental Health</h3>
+        <p>SOAS University of London</p>
+      </div>
+      <div class="card">
+        <h3>Current Research</h3>
+        <p>The "Shahbagi" Label, Gendered Stigma, and Women's Experiences in Post-July Bangladesh Cyberspace</p>
+      </div>
+      <div class="card">
+        <h3>Student Content Creator</h3>
+        <p>SOAS University of London</p>
+      </div>
+    </div>
+  </div>
 
-<p>
-<strong>Inspired By</strong><br>
-Judith Butler • Emma A. Jane • Simone de Beauvoir • Maurice Merleau-Ponty • Sylvia Plath
-</p>
+  <div class="section">
+    <h2>Professional Experience</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Journalism & Writing</h3>
+        <p>The Daily Star, Prothom Alo, and Earki</p>
+      </div>
+      <div class="card">
+        <h3>Policy & Research Communication</h3>
+        <p>Centre for Policy Dialogue (CPD) and SANEM</p>
+      </div>
+      <div class="card">
+        <h3>Development Communication</h3>
+        <p>BRAC</p>
+      </div>
+      <div class="card">
+        <h3>Advertising & Brand Communication</h3>
+        <p>X Integrated Marketing Agency and Playmaker</p>
+      </div>
+    </div>
+  </div>
 
-</div>
-
-</div>
-  
 </body>
-  
-<div class="section">
-  <h2>Research Interests</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>Medical Anthropology</h3>
-    </div>
-
-    <div class="card">
-      <h3>Mental Health</h3>
-    </div>
-
-    <div class="card">
-      <h3>Gender & Sexuality</h3>
-    </div>
-
-    <div class="card">
-      <h3>Digital Culture</h3>
-    </div>
-
-    <div class="card">
-      <h3>Media & Communication</h3>
-    </div>
-
-    <div class="card">
-      <h3>Social & Political Movements</h3>
-    </div>
-
-  </div>
-</div>
-
-<div class="section">
-  <h2>Current Work</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>MA Medical Anthropology & Mental Health</h3>
-      <p>SOAS University of London</p>
-    </div>
-
-    <div class="card">
-      <h3>Current Research</h3>
-      <p>The "Shahbagi" Label, Gendered Stigma, and Women's Experiences in Post-July Bangladesh Cyberspace</p>
-    </div>
-
-    <div class="card">
-      <h3>Student Content Creator</h3>
-      <p>SOAS University of London</p>
-    </div>
-
-  </div>
-</div>
-<div class="section">
-  <h2>Professional Experience</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>Journalism & Writing</h3>
-      <p>The Daily Star, Prothom Alo, and Earki</p>
-    </div>
-
-    <div class="card">
-      <h3>Policy & Research Communication</h3>
-      <p>Centre for Policy Dialogue (CPD) and SANEM</p>
-    </div>
-
-    <div class="card">
-      <h3>Development Communication</h3>
-      <p>BRAC</p>
-    </div>
-
-    <div class="card">
-      <h3>Advertising & Brand Communication</h3>
-      <p>X Integrated Marketing Agency and Playmaker</p>
-    </div>
-
-  </div>
-</div>
-
 </html>
